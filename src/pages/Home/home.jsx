@@ -3,7 +3,11 @@ import './home.css'
 
 const home = () => {
   return (
-    <div>home</div>
+    <div className='home'>
+      <div className="hero">
+        <h1>Largest <br /> Crypto Marketplace</h1>
+      </div>
+    </div>
   )
 }
 
