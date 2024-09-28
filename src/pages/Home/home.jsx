@@ -6,6 +6,11 @@ const home = () => {
 
   const {allCoin, currency} = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
+  const [input, setInput] = useState('');
+
+  const inputHandler = (event) =>{
+
+  }
 
   useEffect (()=>{
     setDisplayCoin(allCoin);
@@ -16,7 +21,7 @@ const home = () => {
         <h1>Largest <br /> Crypto Marketplace</h1>
         <p>Welcome to the world's largest cryptocurrency market place. Sign Up to explore more.</p>
         <form action="">
-          <input type="text" placeholder='Search crypto...' />
+          <input onChange={inputHandler} type="text" placeholder='Search crypto...' required />
           <button type='submit'>Search</button>
         </form>
       </div>
