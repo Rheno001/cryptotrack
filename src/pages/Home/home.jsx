@@ -9,6 +9,7 @@ const home = () => {
   const [input, setInput] = useState('');
 
   const inputHandler = (event) =>{
+    setInput(event.target.value)
 
   }
 
@@ -21,7 +22,7 @@ const home = () => {
         <h1>Largest <br /> Crypto Marketplace</h1>
         <p>Welcome to the world's largest cryptocurrency market place. Sign Up to explore more.</p>
         <form action="">
-          <input onChange={inputHandler} type="text" placeholder='Search crypto...' required />
+          <input onChange={inputHandler} value={input} type="text" placeholder='Search crypto...' required />
           <button type='submit'>Search</button>
         </form>
       </div>
