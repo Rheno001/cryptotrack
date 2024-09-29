@@ -13,6 +13,13 @@ const home = () => {
 
   }
 
+  const searchHandler = async (event)=>{
+    event.preventDefault();
+    const coins = await allCoin.filter((item)=>{
+     return item.name.toLowerCase().includes(input.toLowerCase())
+    })
+  }
+
   useEffect (()=>{
     setDisplayCoin(allCoin);
   }, [allCoin])
@@ -21,7 +28,7 @@ const home = () => {
       <div className="hero">
         <h1>Largest <br /> Crypto Marketplace</h1>
         <p>Welcome to the world's largest cryptocurrency market place. Sign Up to explore more.</p>
-        <form action="">
+        <form onSubmit={searchHandler}>
           <input onChange={inputHandler} value={input} type="text" placeholder='Search crypto...' required />
           <button type='submit'>Search</button>
         </form>
