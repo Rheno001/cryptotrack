@@ -18,6 +18,7 @@ const home = () => {
     const coins = await allCoin.filter((item)=>{
      return item.name.toLowerCase().includes(input.toLowerCase())
     })
+    setDisplayCoin(coins);
   }
 
   useEffect (()=>{
