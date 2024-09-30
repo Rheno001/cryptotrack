@@ -10,8 +10,11 @@ const coin = () => {
   const {currency} = useContext(CoinContext);
 
   const fetchCoinData = async ()=>{
-    const options = {method: 'GET', headers: {accept: 'application/json'}};
-
+    const options = {
+      method: 'GET',
+      headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-dsayiWFQwdkuMf9J2GaADLPb'}
+    };
+    
     fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options)
       .then(response => response.json())
       .then(response => setCoinData(response))
@@ -37,7 +40,6 @@ const coin = () => {
     return (
       <div className='spinner'>
         <div className="spin"></div>
-   
       </div>
     )
 
