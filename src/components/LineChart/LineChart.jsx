@@ -12,9 +12,7 @@ useEffect(()=>{
 },[historicalData])
 
   return (
-    <div>
-
-    </div>
+    <div></div>
   )
 }
 
