@@ -46,8 +46,8 @@ const Navbar = () => {
         <div className="nav-right">
             <select onChange={currencyHandler}>
                 <option value="usd">USD</option>
-                <option value="usd">EUR</option>
-                <option value="usd">NGN</option>
+                <option value="eur">EUR</option>
+                <option value="ngn">NGN</option>
             </select>
             <button>
                 Sign Up
